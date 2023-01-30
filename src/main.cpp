@@ -57,7 +57,7 @@ void setup()
   // creazione della coda
   msg_queue = xQueueCreate(msgQueueLen, sizeof(int32_t));
 
-  // creazione ed avvio dell'unico task
+  // creazione ed avvio del task di stampa
   // DOMANDA: bastano 1024 byte di stack per questo task?
   xTaskCreatePinnedToCore(
       printTask,    // funzione da richiamare nel task
